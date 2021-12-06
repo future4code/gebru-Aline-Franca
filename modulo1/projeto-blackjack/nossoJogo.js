@@ -10,3 +10,11 @@
  * 
  * 
  */
+
+    console.log ("Boas vindas ao jogo de BlackJack!")
+    
+    if(confirm("Quer iniciar uma nova rodada?")){
+
+    } else {
+       console.log("O jogo acabou")
+    }
