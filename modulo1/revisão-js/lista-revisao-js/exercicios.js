@@ -21,6 +21,7 @@ console.log(retornaArrayInvertido = [1, 3, 5, 7, 9].reverse())
 function retornaArrayOrdenado(array) {
   
 }
+console.log(retornaArrayOrdenado = [3, 7, 5, 9, 1].sort())
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
