@@ -15,6 +15,7 @@ console.log(retornaTamanhoArray = [1, 3, 5, 7, 9])
 function retornaArrayInvertido(array) {
   
 }
+console.log(retornaArrayInvertido = [1, 3, 5, 7, 9].reverse())
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
