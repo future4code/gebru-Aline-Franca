@@ -27,7 +27,7 @@ console.log(retornaArrayOrdenado = [3, 7, 5, 9, 1].sort())
 function retornaNumerosPares(array) {
   
 }
-
+console.log(retornaNumerosPares = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(pares => (pares%2)=== 0))
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
  
