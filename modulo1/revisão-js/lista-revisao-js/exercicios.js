@@ -28,10 +28,21 @@ function retornaNumerosPares(array) {
   
 }
 console.log(retornaNumerosPares = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(pares => (pares%2)=== 0))
+
 // EXERCÍCIO 05
+
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 function retornaNumerosParesElevadosADois(array) {
- 
+    if (array % 2 === 0)
+    return array
 }
+const numerosPares = numeros.filter(retornaNumerosParesElevadosADois)
+
+for (let num of numerosPares) {
+    Math.pow(num, 2)
+    console.log(Math.pow(num, 2))
+}
+
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
