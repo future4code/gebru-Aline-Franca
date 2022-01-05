@@ -110,6 +110,7 @@ table {
     width: 60%;
     margin-left: 350px;
     margin-right: auto;
+    margin-bottom: 100px;
 }
 
 td button {
@@ -134,6 +135,7 @@ td button {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    text-align: center;
 }
 
 #back-button:hover {
