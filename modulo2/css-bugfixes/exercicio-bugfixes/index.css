@@ -66,7 +66,9 @@ div button:active{
     width: 15px;
     
 }
-
+div td{
+    font-family:'roboto'
+}
 
 /** 
   *
