@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+header{
+    height: 50px;
+    background: mediumvioletred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    
+
+}
+img{
+    height: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+button{
+    margin-right: 10px;
+}
+main{
+    height: 535px;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+}
+
+aside{
+    display: grid;
+}
+
+section{
+    display: grid;
+}
+footer{
+    background: mediumvioletred;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
