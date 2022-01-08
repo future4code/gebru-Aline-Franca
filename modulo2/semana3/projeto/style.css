@@ -1,0 +1,26 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+header{
+    display: flex;
+    background: rgb(229, 229, 238);
+    height: 50px;
+    justify-content:space-around;
+    align-items: center;
+
+}
+ header h1{
+    justify-self: left;
+}
+main{
+    height: 85vh;
+}
+footer{
+    display: flex;
+    height: 50px;
+    background: rgb(229, 229, 238);
+    justify-content: center;
+    align-items: center;
+}
