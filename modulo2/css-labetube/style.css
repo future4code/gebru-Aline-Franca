@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: rgb(175, 12, 12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+main{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+   
+
+}
+a{
+    color: black;
+ 
+}
+
+footer{
+    height: 38px;
+    background-color: rgb(175, 12, 12);
+    text-align: center;
+    
+    
+    
+}
