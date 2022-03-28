@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react"
+import styled from "styled-components";
+import TituloAstromatch from "./components/TituloAstromatch";
+import axios from "axios";
 
+
+
+const TelaAstromatch = styled.div`
+background-color: white;
+width: 400px;
+height: 600px;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border: 1px solid black;
+border-radius: 5px;
+
+`
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <TelaAstromatch>
+      <TituloAstromatch>
+        
+      </TituloAstromatch>
+      
+    </TelaAstromatch>
+    
   );
 }
 
