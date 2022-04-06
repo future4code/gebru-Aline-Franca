@@ -13,9 +13,9 @@ const HomePage = () => {
 
     return(
     <div>
-        <p>Teste Home Page</p>
-        <button onClick={GoToTripsList}>Lista de Viagens</button>
-        <button onClick={GoToLogin}>Login</button>
+        <h1>LabeX</h1>
+        <button onClick={GoToTripsList}>Ver Viagens</button>
+        <button onClick={GoToLogin}>Área Administrativa</button>
     </div> 
     )
 }

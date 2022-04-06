@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const LoginPage = () =>{
     const navigate = useNavigate()
@@ -8,11 +9,11 @@ const LoginPage = () =>{
         navigate("/")
     }
     const GoToAdminPage = () =>{
-        navigate("/Admin")
+        navigate("Admin")
     }
     return(
         <div>
-            <p>Teste página de login</p>
+            <p>Login</p>
             <button onClick={GoHome}>Voltar para a Home</button>
             <button onClick={GoToAdminPage}>Entrar</button>
         </div>

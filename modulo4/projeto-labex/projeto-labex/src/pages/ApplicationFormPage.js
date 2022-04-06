@@ -9,7 +9,7 @@ const ApplicationForm = () =>{
     }
     return(
         <div>
-            <p>Teste página de formulário</p>
+            <p>Inscreva-se para uma viagem</p>
             <button onClick={GoBack}>Voltar</button>
         </div>
     )
