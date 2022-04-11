@@ -9,7 +9,7 @@ import LoginPage from "../pages/LoginPage";
 import TripDetails from "../pages/TripDetailsPage";
 
 
-export const Router = () => {
+const Router = () => {
   return(
     <BrowserRouter>
     <Routes>

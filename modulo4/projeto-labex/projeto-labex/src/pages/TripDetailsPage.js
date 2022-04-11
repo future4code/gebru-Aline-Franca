@@ -1,19 +1,35 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useEffect } from "react";
+import { useProtectedPage } from "../hooks/useProtectedPage";
 
-const TripDetails = () =>{
-    const navigate = useNavigate()
 
-    const GoBack =()=>{
-        navigate(-1)
-    }
-   
 
-    return(
-        <div>
-            <p>Teste página sobre a viagem</p>
-            <button onClick={GoBack}>Voltar</button>
-        </div>
-    )
+const TripDetails = () => {
+  useProtectedPage();
+
+  useEffect(() => {
+    const URL =
+      "https://us-central1-labenu-apis.cloudfunctions.net/labeX/aline-franca-gebru/trip/7Pk6XaxBDCfXqluFuMLd";
+    const headers = {
+      headers: {
+        auth: localStorage.getItem("token")
+      }
+    };
+
+    axios
+      .get(URL, headers)
+      .then((res) => {
+        console.log(res.data.trip);
+      })
+      .catch((err) => {
+        console.log("ERRO:", err.response);
+      });
+  }, []);
+
+  return (
+  <p>Detalhes da viagem!!!</p>
+  )
+  
 }
+
 export default TripDetails;

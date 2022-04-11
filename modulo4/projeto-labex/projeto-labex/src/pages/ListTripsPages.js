@@ -1,23 +1,33 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import { GoBack, GoToForm } from "../routes/coordinator";
+import styled from "styled-components";
 
+const MenuList = styled.div`
+flex-direction: column;
+margin: 20vh;  
+`
+const ListaTitulo = styled.h2`
+text-align: center;
+`
+const LabexButton = styled.div`
+display: flex;
+justify-content: center;
+
+`
 const ListTrip = () =>{
     const navigate=useNavigate()
-    const params = useParams()
     
-    const GoToForm = (list) =>{
-        navigate("Form")
-    }
-    const GoBack =()=>{
-        navigate(-1)
-    }
-        
-    return(
-        <div>
-            <h2>Lista de Viagens</h2>
-            <button onClick={GoToForm}>Inscreva-se</button>
-            <button onClick={GoBack}>Voltar</button>
-        </div>
+    
+   
+        return(
+        <MenuList>
+            <LabexButton>
+            <button onClick={()=>GoToForm(navigate)}>Inscreva-se</button>
+            <button onClick={()=>GoBack(navigate)}>Voltar</button>
+            </LabexButton>
+            <ListaTitulo>Lista de Viagens</ListaTitulo>
+        </MenuList>
     )
 }
 export default ListTrip;

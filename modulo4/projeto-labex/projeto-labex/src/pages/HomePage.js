@@ -1,22 +1,34 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, {useNavigate} from "react-router-dom";
+import {GoToTripsList, GoToLogin} from "../routes/coordinator";
+import styled from 'styled-components';
+
+const MenuInicial = styled.div`
+flex-direction: column;
+margin: 40vh;
+
+
+
+`
+const LabexTítulo = styled.h1`
+text-align: center;
+`
+const LabexButton = styled.div`
+display: flex;
+justify-content: center;
+`
 
 const HomePage = () => {
-    const navigate = useNavigate ()
-
-    const GoToTripsList = () =>{
-        navigate("/ListTrip")
-    }
-    const GoToLogin = () =>{
-        navigate("/LoginPage")
-    }
+    const navigate = useNavigate();
 
     return(
-    <div>
-        <h1>LabeX</h1>
-        <button onClick={GoToTripsList}>Ver Viagens</button>
-        <button onClick={GoToLogin}>Área Administrativa</button>
-    </div> 
+    <MenuInicial>
+        <LabexTítulo>LabeX</LabexTítulo>
+        
+        <LabexButton>
+        <button onClick={()=>GoToTripsList(navigate)}>Ver Viagens</button>
+        <button onClick={()=>GoToLogin(navigate)}>Área Administrativa</button>
+        </LabexButton>
+    </MenuInicial> 
     )
 }
 export default HomePage;
