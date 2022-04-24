@@ -39,37 +39,64 @@ console.log(verificaSeEMaior(1, 2));
 
 // Exercício 3------------------------------------------------------------------------------------
 
-const cadastro = () => {
-    const usuario = [nomeDoUsuario, anoDeNascimento, senhaDoUsuario, nacionalidade]
+const nomeDoUsuario = prompt("Digite seu nome:");
+const anoDeNascimento = Number(prompt("Digite o ano do seu nascimento:"));
+const senhaDoUsuario = prompt("Digite uma senha:")
+const nacionalidade = prompt("Qual a sua nacionalidade:").toLowerCase();
 
-    const nomeDoUsuario = prompt('Digite seu nome:')
-    const anoDeNascimento = Number(prompt('Digite o ano do seu nascimento:'))
-    const senhaDoUsuario = Number(prompt('Digite uma senha:'))
-    const nacionalidade = prompt('Qual a sua nacionalidade:')
+const usuario = [nomeDoUsuario, anoDeNascimento, senhaDoUsuario, nacionalidade];
+console.log(usuario);
 
-    
-}
-console.log(cadastro());
 
+
+const cadastroUsuario = (usuario) => {
+      
+  if (usuario[1] <= 2004 && usuario[2].length >= 6 && usuario[3] === "brasileira") {
+    return "Cadastro realizado com sucesso!";
+  } else {
+    return "Cadastro não realizado, pois informações inseridas não são válidas.";
+  }
+};
+console.log(cadastroUsuario(usuario))
 // Exercício 4-----------------------------------------------------------------------------------------------
 
-const login = () => {
-    const login = "labenu"
-    //  Sua lógica aqui
 
-}
+const loginUsuario = (senha) => {
+  const confirmaSenha = prompt("Confirme a sua senha para entrar:") 
+  const login = senha
+  if (login === confirmaSenha) {
+    return "Usuário logado";
+  } else {
+    return "Senha inválida";
+  }
+};
 
-console.log(login());
+console.log(loginUsuario(usuario[2]));
+
 
 // Exercício 5----------------------------------------------------------------------------------------------------
 
-const primeiraDose = () => {
-
-    //  Sua lógica aqui
+const primeiraDoseVacina = (nome, vacina) => {
+   let confirmaVacina = prompt('Qual das três vacinas você tomou? (coronavac, Astrazenica ou Pfizer)').toLowerCase()
+ 
+   if (confirmaVacina === 'coronavac'){
+    const tempo = 28
+    const data = '21/05/2022'
+   } else if (confirmaVacina === 'astrazenica'){
+       const tempo = 90
+       const data = '22/07/2022'
+   } else if (confirmaVacina === 'pfizer') {
+    const tempo = 90
+    const data = '22/07/2022'
+   }else{
+       return 'Nome da vacina  é inválida'
+   }
+   
+   
 
 
 }
-console.log(primeiraDose())
+console.log(primeiraDoseVacina())
 
 
 // LOOP+CONDICIONAL
