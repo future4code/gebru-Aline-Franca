@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import {GetDetailsPage, GetPlanetsDetails} from "../../services/requests"
 
 
 function CharacterDetailsPage (props){
@@ -7,38 +7,25 @@ function CharacterDetailsPage (props){
     const [planets, setPlanets] = useState({})
 
     useEffect(()=>{
-        GetDetailsPage()  
+        GetDetailsPage(props.url, setDetails)  
        },[props.url])
 
     useEffect(()=>{
-        GetPlanetsDetails()
+        GetPlanetsDetails(details.homeworld, setPlanets)
     }, [details.homeworld]) 
     
     
-    function GetDetailsPage(){
-        axios.get(props.url)
-        .then((response)=> {
-            console.log(response.data)
-            setDetails(response.data)})
-        .catch((error)=>{
-            console.log(error.message)
-        })
-    }
-
-    function GetPlanetsDetails(){
-        axios.get(details.homeworld)
-        .then((response) => {
-            console.log(response.data)
-            setPlanets(response.data)
-        })
-        .catch((error) =>console.log(error.message))
-    }
+  
 
     return(
     <>    
     <h1>Detalhes do Personagem</h1>
-    <p>Nome: {details.name}</p>
-    <p>Planeta de Origem: {planets.name}</p>
+    {details.name && planets.name ? 
+        <div>
+        <p>Nome: {details.name}</p>
+        <p>Planeta de Origem: {planets.name}</p>
+        </div>:
+        <p>Carregando...</p>}
     <button onClick={props.goToListPage}>Voltar para a lista de personagens</button>
     </>
     )
