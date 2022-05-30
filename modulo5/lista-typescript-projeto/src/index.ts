@@ -18,3 +18,30 @@
 // }
 // recebeParametro(6)
 
+//EXERCÍCIO 03
+
+enum GENERO {
+	ACAO="ação",
+	DRAMA="drama",
+	COMEDIA="comédia",
+	ROMANCE="romance",
+	TERROR="terror"
+}
+
+type filmes= {
+    nomeFilme: string,
+    anoLancamentoFilme: number,
+    generoFilme: string,
+    pontuacaoFilme?: number
+}
+
+function filmesInfo (nome:string, anoLancamento:number, genero:string, pontuacao?:number){
+    const filmes:filmes = {
+        nomeFilme: nome,
+        anoLancamentoFilme: anoLancamento,
+        generoFilme: genero,
+        pontuacaoFilme:pontuacao
+    }
+    console.log(filmes) 
+    }   
+    filmesInfo("Homem-Aranha", 2022, "ação", 90)
