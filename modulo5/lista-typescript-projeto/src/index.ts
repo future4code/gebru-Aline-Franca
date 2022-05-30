@@ -44,4 +44,4 @@ function filmesInfo (nome:string, anoLancamento:number, genero:string, pontuacao
     }
     console.log(filmes) 
     }   
-    filmesInfo("Homem-Aranha", 2022, "ação", 90)
+    filmesInfo("Homem-Aranha", 2022, GENERO.ACAO, 90)
