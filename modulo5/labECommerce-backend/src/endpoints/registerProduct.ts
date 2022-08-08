@@ -12,6 +12,7 @@ export const registerProduct = async (req:Request, res:Response):Promise<void>=>
         let image_url = req.body.image_url
 
         const product:ProductClass = new ProductClass(name, price, image_url)
+        
 
         if(!name || !price || !image_url){
             statusCode = 404

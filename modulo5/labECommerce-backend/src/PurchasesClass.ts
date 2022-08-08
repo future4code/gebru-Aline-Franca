@@ -1,11 +1,9 @@
-type NewType = number
-
 export class PurchasesClass {
-    id: string = Math.floor(Date.now() * Math.random()).toString(36)
-    user_id:string
-    product_id:string
-    quantity:number
-    total_price: number
+    private id: string = Math.floor(Date.now() * Math.random()).toString(36)
+    private user_id:string
+    private product_id:string
+    private quantity:number
+    private total_price: number
 
     constructor(user_id:string, product_id:string, quantity:number, total_price:number){
        
@@ -25,7 +23,7 @@ export class PurchasesClass {
         return this.product_id
     }
     getQuantity():any{
-        this.getQuantity
+        this.quantity
     }
     getTotalPrice():any{
         this.total_price
