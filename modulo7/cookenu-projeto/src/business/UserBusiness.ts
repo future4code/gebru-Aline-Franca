@@ -1,5 +1,5 @@
 import { UserDataBase } from "../data/UserDataBase";
-import { CustomError, InvalidPassword } from "../error/CustomError";
+import { CustomError, InvalidCreatePassword, InvalidPassword } from "../error/CustomError";
 import { AuthenticatorData } from "../models/types";
 import { LoginUserInputDTO, User, UserInputDTO } from "../models/user";
 import Authenticator from "../services/Authenticator";
@@ -17,6 +17,14 @@ export class UserBusiness  {
 
         if (!name || !email || !password || !role){
             throw new CustomError(422, "Por favor insira os dados solicitados")
+        }
+
+        if(password.length < 6){
+            throw new InvalidCreatePassword
+        }
+
+        if(role !== "NORMAL" && role !== "ADMIN"){
+            role = "NORMAL"
         }
 
         const id = IdGenerator.generateId()
