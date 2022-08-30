@@ -39,4 +39,20 @@ export class UserController {
           
         }
       }
+
+      public ownProfile = async (req: Request, res: Response) => {
+        // try {
+        //   const token = req.headers.authorization
+
+        //   }
+
+          
+
+        // //   res.status(200).send({message: "Login efetuado com sucesso!", token})
+          
+        // } catch (error: any) {
+        //   res.status(400).send(error.message);
+          
+        // }
+      }
 }
