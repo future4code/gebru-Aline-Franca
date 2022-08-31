@@ -1,0 +1,24 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "name": "Sonia",
+    "email": "sonia@email.com",
+    "password": "ORQ",
+    "role": "ADMIN"
+}
+
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+   "email": "isabel2@email.com", 
+   "password": "praquesenha"
+}
+
+
+###
+GET http://localhost:3003/user/login
+Content-Type: application/json
