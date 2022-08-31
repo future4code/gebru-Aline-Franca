@@ -61,4 +61,24 @@ export class UserBusiness  {
         return token
     }
 
+    async findUserBusiness(token: string) {
+        try {
+          if (!token) {
+            throw new CustomError(400, "Token inválido");
+          }
+    
+          const authenticatorData = Authenticator.getTokenData(token);
+    
+          if (!authenticatorData.id) {
+            throw new CustomError(400, "Não foi possível localizar o id");
+          }
+    
+          const user = await this.userDataBase.findUserById(authenticatorData.id);
+    
+    
+          return user;
+        } catch (error: any) {
+          throw new CustomError(400, "Não foi possível localizar as informações");
+        }
+      }
 }

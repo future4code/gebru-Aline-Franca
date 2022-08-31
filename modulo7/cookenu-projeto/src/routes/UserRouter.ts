@@ -7,5 +7,5 @@ const userController = new UserController()
 
 UserRouter.post("/signup", userController.signup)
 UserRouter.post("/login", userController.login)
-// UserRouter.get("/profile", userController.ownProfile)
+UserRouter.get("/profile", userController.ownProfile)
 

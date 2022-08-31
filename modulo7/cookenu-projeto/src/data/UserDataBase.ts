@@ -25,7 +25,7 @@ export class UserDataBase extends BaseDatabase {
     public findUserByEmail = async(email:string) =>{
         try {
             const result = await UserDataBase.connection("cookenu_users")
-            .select()
+            .select("id", "name", "email")
             .where({email})
             return result[0]
 
@@ -34,4 +34,20 @@ export class UserDataBase extends BaseDatabase {
         }
 
     }
+
+    public findUserById = async(id:string) =>{
+        try {
+            const result = await UserDataBase.connection("cookenu_users")
+            .select("id", "name", "email")
+            .where({id})
+            return result[0]
+
+        } catch (error:any) {
+         throw new CustomError(400, error.sqlMessage);   
+        }
+
+    }
+
+    
+
 }

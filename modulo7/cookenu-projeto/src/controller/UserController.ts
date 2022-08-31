@@ -41,18 +41,14 @@ export class UserController {
       }
 
       public ownProfile = async (req: Request, res: Response) => {
-        // try {
-        //   const token = req.headers.authorization
-
-        //   }
-
+        try {
+          const token = req.headers.authorization as string
+          const user = await this.userBusiness.findUserBusiness(token)
+          res.status(200).send({message: "Login efetuado com sucesso!", token})
+          }
+        catch (error: any) {
+          res.status(400).send(error.message);
           
-
-        // //   res.status(200).send({message: "Login efetuado com sucesso!", token})
-          
-        // } catch (error: any) {
-        //   res.status(400).send(error.message);
-          
-        // }
+        }
       }
 }
